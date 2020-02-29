@@ -45,12 +45,19 @@ html {
 body {
     font-family: 'Catamaran', Arial, Helvetica, sans-serif;
     font-size: 2rem;
+    line-height: 2.9rem;
 }
 
 h1,
 h2,
 h3 {
     margin: 0;
+}
+
+h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4.2rem;
+    font-weight: 400;
 }
 
 a {
@@ -260,7 +267,11 @@ img {
 
 .about__copy {
     width: 50%;
+    height: 100%;
     float: left;
+    padding-right: 80px;
+    padding-top: 95px;
+    border: 1px red solid;
 }
 
 .about__image {
@@ -280,6 +291,11 @@ img {
 .mission__copy {
     width: 50%;
     float: right;
+    height: 100%;
+    padding-right: 80px;
+    padding-left: 80px;
+    padding-top: 95px;
+    border: 1px red solid;
 }
 
 .mission__image {
@@ -293,3 +309,34 @@ img {
     height: 428.3px;
 }
 /* Mission Styles End */
+
+.btn {
+    text-transform: uppercase;
+    background-color: black;
+    color: #F2A11C;
+    padding: 10px 30px;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.information-section__meet-alissa {
+    background-color: #F4F4F4;
+    padding: 110px 0;
+}
+
+.meet-alissa__image {
+    width: 25%;
+    float: left;
+}
+
+.meet-alissa__image img {
+    height: 100%;
+}
+
+.meet-alissa__copy {
+    width: 75%;
+    float: left;
+    padding-right: 50px;
+    padding-top: 35px;
+    padding-left: 50px;
+}
