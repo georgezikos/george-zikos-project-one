@@ -566,3 +566,76 @@ img {
         background-position: right;
     }
 }
+
+/* The Gram Section */
+.the-gram {
+    background-color: #F4F4F4;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.the-gram__container {
+    margin: 0 auto;
+    border: 1px red solid;
+}
+
+.the-gram__heading {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.the-gram__image {
+    float: left;
+    width: calc(100% / 3 - 27px);
+}
+
+.image--2 {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+@media (max-width: 1064px) {
+    .the-gram__container {
+        width: 60%;
+    }
+    
+    .the-gram__image {
+        float: none;
+        width: 100%;
+    }
+
+    .image--2 {
+        margin: 40px 0;
+    }
+}
+
+@media (max-width: 940px) {
+    .the-gram {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .the-gram__heading {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .the-gram__container {
+        width: 80%;
+    }
+    .image--2 {
+        margin: 30px 0;
+    }
+}    
+
+@media (max-width: 480px) {
+    .the-gram {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .the-gram__container {
+        width: 100%;
+    }
+}
+
