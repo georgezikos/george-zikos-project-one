@@ -322,8 +322,8 @@ img {
     height: 428.3px;
 }
 
-.about__image img,
-.mission__image img {
+.image--about,
+.image--mission {
     height: 100%;
 }
 
@@ -364,6 +364,10 @@ img {
         position: static;
         height: auto;
     }
+
+    .information-section img {
+        height: auto;
+    }
 }
 
 @media (max-width: 940px) {
@@ -402,30 +406,97 @@ img {
     }
 }
 
-
-
-/* Mission Styles End */
-
-
-
 .information-section__meet-alissa {
     background-color: #F4F4F4;
-    padding: 110px 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border: red 1px solid;
+}
+
+.meet-alissa__container {
+    border: 1px red solid;
+}
+
+.information-section__meet-alissa h2 {
+    margin-bottom: 30px;
 }
 
 .meet-alissa__image {
-    width: 25%;
     float: left;
+    width: 22%;
+    height: 331.4px;
 }
 
-.meet-alissa__image img {
+.image--meet-alissa {
     height: 100%;
 }
 
 .meet-alissa__copy {
-    width: 75%;
+    width: 78%;
     float: left;
-    padding-right: 50px;
-    padding-top: 35px;
+    padding-right: 100px;
     padding-left: 50px;
+    padding-bottom: 10px;
+    border: 1px red solid;
+}
+
+.meet-alissa__copy p {
+    margin-bottom: 57px;
+}
+
+@media (max-width: 1530px) {
+    .meet-alissa__copy {
+        float: none;
+        text-align: center;
+        width: 60%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .meet-alissa__image {
+        width: 60%;
+        float: none;
+        margin: 0 auto;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    .meet-alissa__copy .btn {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+@media (max-width: 940px) {
+    .information-section__meet-alissa {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .meet-alissa__image,
+    .meet-alissa__copy {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .meet-alissa__copy p {
+        margin-bottom: 47px;
+    }   
+
+    .meet-alissa__image,
+    .meet-alissa__copy {
+        width: 100%;
+    }
+}    
+
+@media (max-width: 480px) {
+    .meet-alissa__copy p {
+        margin-bottom: 37px;
+    }   
+
+    .information-section__meet-alissa {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 }
