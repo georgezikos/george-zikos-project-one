@@ -17,15 +17,7 @@ Darker Grey = #1F2022
 Dark Grey = #4A4A4A
 Light Grey = #F4F4F4
 
-Text Styles:
-h1 = Pacifico Regular 130px Center
-h2–6 = Pacifico Regular 42px
-p = Catamaran Regular 20px line-height: 29px
-button = Catamaran Bold 18px Center line-height: 29px
-
-font-family: 'Pacifico', ;
-font-family: 'Catamaran', ;
-
+Breakpoints:
 /* Portrait tablet and small desktops */
 /* @media (max-width: 940px) {
 } */
@@ -38,6 +30,7 @@ font-family: 'Catamaran', ;
 /* @media (max-width: 480px) {
 } */
 
+/* Global Styles */
 html {
     font-size: 62.5%;
 }
@@ -46,6 +39,7 @@ body {
     font-family: 'Catamaran', Arial, Helvetica, sans-serif;
     font-size: 2rem;
     line-height: 2.9rem;
+    color: #4A4A4A;
 }
 
 h1,
@@ -58,6 +52,13 @@ h2 {
     font-family: 'Pacifico', cursive;
     font-size: 4.2rem;
     font-weight: 400;
+    color: #1F2022;
+}
+
+@media (max-width: 360px) {
+    h2 {
+        font-size: 4rem;
+    }
 }
 
 a {
@@ -65,12 +66,9 @@ a {
 }
 
 ul {
-    padding-left: 0;
-    margin: 0;
-}
-
-li {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 ul a {
@@ -84,17 +82,14 @@ img {
 
 .wrapper {
     width: 90%;
-    max-width: 1280px;
+    max-width: 1680px;
     margin: 0 auto;
+    position: relative;
+    height: 100%;
     border: 1px red solid;
 }
 
-/* Header Styles Begin */
-.hero-section__container {
-    position: relative;
-    height: 100%;
-}
-
+/* Header Styles */
 .hero-section {
     height: 84.3vh;
     min-height: 600px;
@@ -103,30 +98,28 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* Background Shorthand = [color] [image] [position] [size] [repeat] [attachment] */
+    transition: ease all 0.5s;
+    -webkit-transition: ease all 0.5s;
+    -moz-transition: ease all 0.5s;
+    -ms-transition: ease all 0.5s;
+    -o-transition: ease all 0.5s;
 }
 
-/* Play with the VH and background sizing to match mobile view */
-/* @media (max-width: 480px) {
+@media (max-width: 768px) {
     .hero-section {
-        height: 65vh;
-        /* background-size: 1200px; 
+        height: 76vh;
     }
 }
-*/
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 62vh;
+    }
+}
 
 .hero-section__main-nav {
     position: relative;
     height: 50px;
-}
-
-.fa-bars {
-    float: left;
-    position: absolute;
-    right: 0;
-    font-size: 4rem;
-    color: #fff;
-    visibility: hidden;
 }
 
 .hero-section__main-nav ul {
@@ -141,18 +134,24 @@ img {
 }
 
 .hero-section__main-nav li {
-    /* display: inline-block; */
     margin-right: 40px;
     float: left;
 }
-
 
 .hero-section__main-nav li:last-child {
     margin-right: 0;
 }
 
+.fa-bars {
+    float: left;
+    position: absolute;
+    right: 0;
+    font-size: 4rem;
+    color: #fff;
+    visibility: hidden;
+}
 
-@media (max-width: 945px) {
+@media (max-width: 768px) {
     .hero-section__main-nav ul {
         height: 0;
         overflow: hidden;
@@ -167,19 +166,25 @@ img {
     font-family: 'Pacifico', cursive;
     font-size: 13rem;
     color: #F2A11C;
+    font-weight: 400;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        -moz-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
-        -o-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transition: ease all 0.5s;
+    -webkit-transition: ease all 0.5s;
+    -moz-transition: ease all 0.5s;
+    -ms-transition: ease all 0.5s;
+    -o-transition: ease all 0.5s;
 }
 
 @media (max-width: 940px) {
     .hero-section__heading {
-        font-size: 11rem;
+        font-size: 12rem;
     }
 }
 
@@ -191,51 +196,27 @@ img {
 
 @media (max-width: 480px) {
     .hero-section__heading {
-        font-size: 7.5rem;
+        font-size: 7rem;
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 360px) {
     .hero-section__heading {
         font-size: 6rem;
     }
 }
 
 .hero-section__social-nav {
+    text-align: center;
+    line-height: 0;
     position: absolute;
-    right: -90px;
+    right: 0px;
     top: 50%;
     transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-    text-align: center;
-}
-
-@media (max-width: 1525px) {
-    .hero-section__social-nav {
-        right: -45px;
-    }
-}
-
-@media (max-width: 1445px) and (min-width: 1125px) {
-    .hero-section__social-nav {
-        right: -30px;
-    }
-}
-
-@media (max-width: 1125px) and (min-width: 945px) {
-    .hero-section__social-nav {
-        right: -20px;
-    }
-}
-
-@media (max-width: 945px) {
-    .hero-section__social-nav {
-        height: 0;
-        overflow: hidden;
-    }
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
 
 .hero-section__social-nav li {
@@ -250,8 +231,15 @@ img {
     font-size: 2.4rem;
     color: #F2A11C;
 }
-/* Header Styles End */
 
+@media (max-width: 940px) {
+    .hero-section__social-nav {
+        height: 0;
+        overflow: hidden;
+    }
+}
+
+/* Main Section */
 .information-section {
     border: 1px red solid;
     max-width: 1680px;
@@ -259,53 +247,62 @@ img {
     position: relative;
 }
 
-.information-section p {
-    margin-bottom: 30px;
+.btn {
+    text-transform: uppercase;
+    background-color: #1F2022;
+    color: #F2A11C;
+    padding: 10px 28px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    transition: ease all 0.5s;
+    -webkit-transition: ease all 0.5s;
+    -moz-transition: ease all 0.5s;
+    -ms-transition: ease all 0.5s;
+    -o-transition: ease all 0.5s;
 }
 
-/* About Styles Begin */
+.information-section p {
+    margin-bottom: 35px;
+    transition: ease all 0.5s;
+    -webkit-transition: ease all 0.5s;
+    -moz-transition: ease all 0.5s;
+    -ms-transition: ease all 0.5s;
+    -o-transition: ease all 0.5s;
+}
+
 .information-section__about,
 .information-section__mission {
     height: 428.3px;
 }
 
-@media (max-width: 1400px) {
-    .information-section__about,
-    .information-section__mission {
-        height: 357px;
-    }
-}
-
-@media (max-width: 1265px) {
-    .information-section__about,
-    .information-section__mission {
-        height: auto;
-    }
-}
-
-
-
 .about__copy {
     width: 50%;
     height: 100%;
     float: left;
-    padding-right: 100px;
-    padding-top: 95px;
+    padding-right: 200px;
+    padding-top: 80px;
     border: 1px red solid;
+    transition: ease all 0.5s;
+    -webkit-transition: ease all 0.5s;
+    -moz-transition: ease all 0.5s;
+    -ms-transition: ease all 0.5s;
+    -o-transition: ease all 0.5s;
 }
 
-@media (max-width: 1400px) {
-    .about__copy {
-        padding-top: 50px;
-        padding-right: 80px;
-    }
-}
-
-@media (max-width: 1265px) {
-    .about__copy {
-        float: none;
-        width: 100%;
-    }
+.mission__copy {
+    width: 50%;
+    height: 100%;
+    float: right;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 80px;
+    border: solid 1px red;
+    transition: ease all 0.5s;
+    -webkit-transition: ease all 0.5s;
+    -moz-transition: ease all 0.5s;
+    -ms-transition: ease all 0.5s;
+    -o-transition: ease all 0.5s;
 }
 
 .about__image {
@@ -313,81 +310,103 @@ img {
     float: left;
     position: absolute;
     right: 0;
-}
-
-@media (max-width: 1265px) {
-    .about__image {
-        float: none;
-        width: 100%;
-        position: static;
-    }
-}
-
-
-.about__image img {
     height: 428.3px;
+
 }
-
-@media (max-width: 1400px) {
-    .about__image img,
-    .mission__image img {
-        height: 357px;
-    }
-}
-
-@media (max-width: 1265px) {
-    .about__image img,
-    .mission__image img {
-        height: auto;
-    }
-}
-
-
-
-
-/* About Styles End */
-
-/* Mission Styles Begin */
-.mission__copy {
-    width: 50%;
-    float: right;
-    height: 100%;
-    padding-right: 10px;
-    padding-left: 100px;
-    padding-top: 95px;
-    border: 1px red solid;
-}
-
-@media (max-width: 1400px) {
-    .mission__copy {
-        padding-top: 50px;
-        padding-left: 80px;
-    }
-}
-
-
 
 .mission__image {
     width: 50%;
     float: right;
     position: absolute;
     left: 0;
-}
-
-.mission__image img {
     height: 428.3px;
 }
+
+.about__image img,
+.mission__image img {
+    height: 100%;
+}
+
+@media (max-width: 1530px) {
+    .about__copy {
+        padding-top: 68px;
+        padding-right: 100px;
+    }
+
+    .mission__copy {
+        padding-top: 68px;
+        padding-right: 40px;
+    }
+    
+}
+
+@media (max-width: 1200px) {
+    .information-section__about,
+    .information-section__mission {
+        height: auto;
+    }
+
+    .about__copy,
+    .mission__copy {
+        float: none;
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 80px;
+    }
+
+    .about__image,
+    .mission__image {
+        float: none;
+        width: 100%;
+        position: static;
+        height: auto;
+    }
+}
+
+@media (max-width: 940px) {
+    .about__copy,
+    .mission__copy {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about__copy,
+    .mission__copy {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .information-section p {
+        font-size: 1.8rem;
+    }
+
+    .about__copy,
+    .mission__copy {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width: 360px) {
+    .btn {
+        font-size: 1.7rem;
+    }
+
+    .information-section p {
+        font-size: 1.7rem;
+    }
+}
+
+
+
 /* Mission Styles End */
 
-.btn {
-    text-transform: uppercase;
-    background-color: #1F2022;
-    color: #F2A11C;
-    padding: 10px 30px;
-    font-size: 1.8rem;
-    font-weight: 400;
-    letter-spacing: 0.05rem;
-}
+
 
 .information-section__meet-alissa {
     background-color: #F4F4F4;
