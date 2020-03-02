@@ -61,6 +61,12 @@ h2 {
     }
 }
 
+h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #F2A11C;
+}
+
 a {
     text-decoration: none;
 }
@@ -498,5 +504,65 @@ img {
     .information-section__meet-alissa {
         padding-top: 60px;
         padding-bottom: 60px;
+    }
+}
+
+/* Quick Links Section */
+.quick-links {
+    background-image: url('../assets/image-5.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    height: 490px;
+    position: relative;
+}
+
+.quick-links ul {
+    border: 1px red solid;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+}
+
+.quick-links li {
+    float: left;
+    border: 1px red solid;
+    margin-right: 60px;
+    transition: ease all 0.5s;
+    -webkit-transition: ease all 0.5s;
+    -moz-transition: ease all 0.5s;
+    -ms-transition: ease all 0.5s;
+    -o-transition: ease all 0.5s;
+}
+
+.quick-links li:last-child {
+    margin-right: 0;
+}
+
+.quick-links .fas {
+    font-size: 4.2rem;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1064px) {
+    .quick-links li {
+        float: none;
+        width: 100%;
+        margin-bottom: 36px;
+    }
+
+    .quick-links li:last-child {
+        margin-bottom: 0;
+    }
+
+    .quick-links {
+        height: 575px;
+        background-position: right;
     }
 }
