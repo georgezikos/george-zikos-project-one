@@ -329,6 +329,12 @@ img {
     height: 100%;
 }
 
+.information-section img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
 @media (max-width: 1530px) {
     .about__copy {
         padding-top: 68px;
@@ -364,11 +370,14 @@ img {
         float: none;
         width: 100%;
         position: static;
-        height: auto;
+        /* height: auto; */
     }
 
     .information-section img {
-        height: auto;
+        /* height: auto; */
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
     }
 }
 
